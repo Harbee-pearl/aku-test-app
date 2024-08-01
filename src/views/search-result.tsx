@@ -46,7 +46,7 @@ function SearchResult() {
     error,
   } = useQuery({
     queryFn: () => SearchService.searchGithubUsers(query, type),
-    queryKey: ["search-users"],
+    queryKey: ["search-users", query, type],
   });
 
   useEffect(() => {
